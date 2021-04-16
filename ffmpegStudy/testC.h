@@ -9,7 +9,7 @@
 #define testC_h
 
 #include <stdio.h>
-
+#include "libavutil/log.h"
 void callCLog(void);
 
 #endif /* testC_h */

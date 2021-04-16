@@ -10,5 +10,8 @@
 
 void callCLog(){
     printf(" this is a log from c");
+    av_log_set_level(AV_LOG_DEBUG);
+    av_log(NULL,AV_LOG_DEBUG,"this is ffmpeg log");
+    
     return;
 }
