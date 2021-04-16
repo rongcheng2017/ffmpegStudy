@@ -48,16 +48,17 @@ void callCLog(){
     int count=0;
     while((ret=av_read_frame(fmt_ctx, &pkt) &&
            count++ <500)==0){
-
         printf("pkt siz size %d\n",pkt.size);
-        av_log(NULL,AV_LOG_DEBUG,"pkt siz size %d\n",pkt.size);
+        //释放
+        av_packet_unref(&pkt);
     }
 
-
     //释放
-    av_packet_unref(&pkt);
+    avformat_close_input(&fmt_ctx);
     
     //输出到文件中
+    
+    
     
     
     
