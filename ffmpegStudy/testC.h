@@ -14,6 +14,6 @@
 #include "libavformat/avformat.h"
 #include "libavcodec/codec.h"
 
-void callCLog(void);
+void rec_audio(void);
 
 #endif /* testC_h */

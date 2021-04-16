@@ -22,7 +22,7 @@ class ViewController: NSViewController {
     @objc
     func testBtnClick(){
 //        print("test btn click")
-        callCLog()
+        rec_audio()
     }
 
     override var representedObject: Any? {

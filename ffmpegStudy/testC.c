@@ -8,15 +8,14 @@
 #include "testC.h"
 
 
-void callCLog(){
+void rec_audio(){
     
-    
+    av_log_set_level(AV_LOG_DEBUG);
     //==== 音频采集 ====
-    //一、打开设备
     
     int ret=0;
     //接收错误信息
-    char errors[1024];
+    char errors[1024]={0};
     //上下文
     AVFormatContext * fmt_ctx=NULL;
     //[[video device]:[audio device]]
@@ -24,7 +23,12 @@ void callCLog(){
     //编码参数
     AVDictionary *options=NULL;
     
+    //av_read_frame 返回0说明成功
+    AVPacket pkt;
+    av_init_packet(&pkt);
+    int count=0;
     
+    //一、打开设备
     //1. 注册设备
     avdevice_register_all();
     //2. 设置采集方式 avfoundation/dshow/alsa   mac 下是 avfoundation
@@ -33,7 +37,6 @@ void callCLog(){
     ret=avformat_open_input(&fmt_ctx,devicename,inputFormat, &options);
     //打开设备返回值，<0失败。
     if(ret<0){
-        printf("failure");
         av_strerror(ret, errors, 1024);
         printf(stderr,"Failed to open audio device ,[%d]%s\n)",ret,errors);
         return;
@@ -41,29 +44,18 @@ void callCLog(){
             
     //采集数据
     //二、读取音频数据
-
-    //av_read_frame 返回0说明成功
-    AVPacket pkt;
-    av_init_packet(&pkt);
-    int count=0;
     while((ret=av_read_frame(fmt_ctx, &pkt) &&
            count++ <500)==0){
-        printf("pkt siz size %d\n",pkt.size);
+        av_log(NULL,AV_LOG_INFO,"pkt siz size %d\n",pkt.size);
         //释放
         av_packet_unref(&pkt);
     }
 
-    //释放
+    //关闭 释放
     avformat_close_input(&fmt_ctx);
-    
-    //输出到文件中
-    
-    
-    
-    
-    
-    av_log_set_level(AV_LOG_DEBUG);
-    av_log(NULL,AV_LOG_DEBUG,"===> enter ffmpeg <===");
+   
+  
+    av_log(NULL,AV_LOG_DEBUG,"===>  ffmpeg end <===");
     
     return;
 }
