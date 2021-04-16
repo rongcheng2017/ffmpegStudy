@@ -10,6 +10,9 @@
 
 #include <stdio.h>
 #include "libavutil/log.h"
+#include "libavdevice/avdevice.h"
+#include "libavformat/avformat.h"
+
 void callCLog(void);
 
 #endif /* testC_h */

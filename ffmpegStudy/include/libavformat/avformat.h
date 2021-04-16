@@ -2146,7 +2146,7 @@ ff_const59 AVInputFormat *av_find_input_format(const char *short_name);
 
 /**
  * Guess the file format.
- *
+*
  * @param pd        data to be probed
  * @param is_opened Whether the file is already opened; determines whether
  *                  demuxers with or without AVFMT_NOFILE are probed.
