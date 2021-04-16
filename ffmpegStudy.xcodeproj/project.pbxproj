@@ -11,6 +11,7 @@
 		2F2B0EE226297800002D6637 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2B0EE126297800002D6637 /* ViewController.swift */; };
 		2F2B0EE426297801002D6637 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F2B0EE326297801002D6637 /* Assets.xcassets */; };
 		2F2B0EE726297801002D6637 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F2B0EE526297801002D6637 /* Main.storyboard */; };
+		2F2B0EFF26297B8E002D6637 /* testC.c in Sources */ = {isa = PBXBuildFile; fileRef = 2F2B0EFE26297B8E002D6637 /* testC.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,9 @@
 		2F2B0EE626297801002D6637 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2F2B0EE826297801002D6637 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F2B0EE926297801002D6637 /* ffmpegStudy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ffmpegStudy.entitlements; sourceTree = "<group>"; };
+		2F2B0EFC26297B8E002D6637 /* ffmpegStudy-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ffmpegStudy-Bridging-Header.h"; sourceTree = "<group>"; };
+		2F2B0EFD26297B8E002D6637 /* testC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testC.h; sourceTree = "<group>"; };
+		2F2B0EFE26297B8E002D6637 /* testC.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = testC.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,9 @@
 				2F2B0EE526297801002D6637 /* Main.storyboard */,
 				2F2B0EE826297801002D6637 /* Info.plist */,
 				2F2B0EE926297801002D6637 /* ffmpegStudy.entitlements */,
+				2F2B0EFD26297B8E002D6637 /* testC.h */,
+				2F2B0EFE26297B8E002D6637 /* testC.c */,
+				2F2B0EFC26297B8E002D6637 /* ffmpegStudy-Bridging-Header.h */,
 			);
 			path = ffmpegStudy;
 			sourceTree = "<group>";
@@ -94,6 +101,7 @@
 				TargetAttributes = {
 					2F2B0EDB26297800002D6637 = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 					};
 				};
 			};
@@ -132,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F2B0EFF26297B8E002D6637 /* testC.c in Sources */,
 				2F2B0EE226297800002D6637 /* ViewController.swift in Sources */,
 				2F2B0EE026297800002D6637 /* AppDelegate.swift in Sources */,
 			);
@@ -271,6 +280,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = ffmpegStudy/ffmpegStudy.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -283,6 +293,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rongcheng.ffmpegStudy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ffmpegStudy/ffmpegStudy-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -292,6 +304,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = ffmpegStudy/ffmpegStudy.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -304,6 +317,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rongcheng.ffmpegStudy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ffmpegStudy/ffmpegStudy-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;

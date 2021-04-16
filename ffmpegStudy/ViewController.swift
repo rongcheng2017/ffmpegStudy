@@ -21,7 +21,8 @@ class ViewController: NSViewController {
     }
     @objc
     func testBtnClick(){
-        print("test btn click")
+//        print("test btn click")
+        callCLog()
     }
 
     override var representedObject: Any? {
