@@ -12,7 +12,29 @@
 		2F2B0EE426297801002D6637 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F2B0EE326297801002D6637 /* Assets.xcassets */; };
 		2F2B0EE726297801002D6637 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F2B0EE526297801002D6637 /* Main.storyboard */; };
 		2F2B0EFF26297B8E002D6637 /* testC.c in Sources */ = {isa = PBXBuildFile; fileRef = 2F2B0EFE26297B8E002D6637 /* testC.c */; };
+		2F2B0F0526297D28002D6637 /* libavformat.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F2B0F0226297D28002D6637 /* libavformat.dylib */; };
+		2F2B0F0626297D28002D6637 /* libavformat.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 2F2B0F0226297D28002D6637 /* libavformat.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		2F2B0F0726297D28002D6637 /* libavutil.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F2B0F0326297D28002D6637 /* libavutil.dylib */; };
+		2F2B0F0826297D28002D6637 /* libavutil.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 2F2B0F0326297D28002D6637 /* libavutil.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		2F2B0F0926297D28002D6637 /* libavdevice.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F2B0F0426297D28002D6637 /* libavdevice.dylib */; };
+		2F2B0F0A26297D28002D6637 /* libavdevice.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 2F2B0F0426297D28002D6637 /* libavdevice.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2F2B0F0B26297D28002D6637 /* Embed Libraries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2F2B0F0626297D28002D6637 /* libavformat.dylib in Embed Libraries */,
+				2F2B0F0826297D28002D6637 /* libavutil.dylib in Embed Libraries */,
+				2F2B0F0A26297D28002D6637 /* libavdevice.dylib in Embed Libraries */,
+			);
+			name = "Embed Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2F2B0EDC26297800002D6637 /* ffmpegStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ffmpegStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -25,6 +47,9 @@
 		2F2B0EFC26297B8E002D6637 /* ffmpegStudy-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ffmpegStudy-Bridging-Header.h"; sourceTree = "<group>"; };
 		2F2B0EFD26297B8E002D6637 /* testC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testC.h; sourceTree = "<group>"; };
 		2F2B0EFE26297B8E002D6637 /* testC.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = testC.c; sourceTree = "<group>"; };
+		2F2B0F0226297D28002D6637 /* libavformat.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavformat.dylib; path = ffmpegStudy/libs/libavformat.dylib; sourceTree = "<group>"; };
+		2F2B0F0326297D28002D6637 /* libavutil.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavutil.dylib; path = ffmpegStudy/libs/libavutil.dylib; sourceTree = "<group>"; };
+		2F2B0F0426297D28002D6637 /* libavdevice.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavdevice.dylib; path = ffmpegStudy/libs/libavdevice.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +57,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F2B0F0526297D28002D6637 /* libavformat.dylib in Frameworks */,
+				2F2B0F0726297D28002D6637 /* libavutil.dylib in Frameworks */,
+				2F2B0F0926297D28002D6637 /* libavdevice.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +71,7 @@
 			children = (
 				2F2B0EDE26297800002D6637 /* ffmpegStudy */,
 				2F2B0EDD26297800002D6637 /* Products */,
+				2F2B0F0126297D28002D6637 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +99,16 @@
 			path = ffmpegStudy;
 			sourceTree = "<group>";
 		};
+		2F2B0F0126297D28002D6637 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2F2B0F0426297D28002D6637 /* libavdevice.dylib */,
+				2F2B0F0226297D28002D6637 /* libavformat.dylib */,
+				2F2B0F0326297D28002D6637 /* libavutil.dylib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -80,6 +119,7 @@
 				2F2B0ED826297800002D6637 /* Sources */,
 				2F2B0ED926297800002D6637 /* Frameworks */,
 				2F2B0EDA26297800002D6637 /* Resources */,
+				2F2B0F0B26297D28002D6637 /* Embed Libraries */,
 			);
 			buildRules = (
 			);
@@ -282,6 +322,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = ffmpegStudy/ffmpegStudy.entitlements;
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = AHXSZHP23T;
@@ -291,11 +332,16 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ffmpegStudy/libs",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rongcheng.ffmpegStudy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "ffmpegStudy/ffmpegStudy-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
+				SYSTEM_HEADER_SEARCH_PATHS = /Users/frc/Code/ios/ffmpegStudy/ffmpegStudy/include;
 			};
 			name = Debug;
 		};
@@ -306,6 +352,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = ffmpegStudy/ffmpegStudy.entitlements;
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = AHXSZHP23T;
@@ -315,10 +362,15 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ffmpegStudy/libs",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rongcheng.ffmpegStudy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "ffmpegStudy/ffmpegStudy-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
+				SYSTEM_HEADER_SEARCH_PATHS = /Users/frc/Code/ios/ffmpegStudy/ffmpegStudy/include;
 			};
 			name = Release;
 		};
