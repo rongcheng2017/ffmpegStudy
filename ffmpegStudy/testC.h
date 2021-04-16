@@ -12,6 +12,7 @@
 #include "libavutil/log.h"
 #include "libavdevice/avdevice.h"
 #include "libavformat/avformat.h"
+#include "libavcodec/codec.h"
 
 void callCLog(void);
 
